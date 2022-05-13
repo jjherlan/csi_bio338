@@ -86,26 +86,17 @@ add1 ( glm.x0, scope = ~bird * behavior, test = "Chisq")
 # interactions to the model. The effect of the mound type seems to be larger than the season, which is in agreement
 # with the likelihood ratio test.
 
-# So we now extend our model by both first-order interactions and call `add1` again with the extended 
-# model to test the remaining second-order interactions:
-
-# glm.x1 <- update ( glm.x0, . ~ . + bird:behavior + species:mound )
-# add1( glm.x1, scope = ~ species*season*mound, test = "Chisq")
-
-# This interaction term, however, is not significant (and the AIC value even increases with addition),
-# so we conclude that the season and the mound type within the neighborhood affect the presence of 
-# grasshopper species and their size independently.
-
 # To provide students with of this research project with a more specific ecological interpretation, we must
 # work out the direction of the effects we have just revealed. For this, we start from the estimated values 
 # of our regression coefficients. These coefficients can be obtained with extracting function `coef`. 
 
 coef ( glm.x1 )
 
+# The number of behaviors was significantly affected by the interaction of species of water fowl and 
+# the behavior type (X^2,3 = 162.03, p < 0.001). 
 
-
-52.593-35.315
-52.593-23.126
+52.593-35.315 #17.278
+52.593-23.126 #
 
 322.99-25.78 #season 297.21
 322.99-279.51 #mound 43.48
