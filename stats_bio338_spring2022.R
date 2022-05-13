@@ -27,7 +27,6 @@ data2_long <-
   data2 %>%
     pivot_longer(
       cols = everything(),
-      names_to = "bird_behav",
       values_to = "count"
     )
 

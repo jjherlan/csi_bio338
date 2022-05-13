@@ -7,3 +7,5 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "BIO 338 Spring 2022"
+      href: bio338.html
